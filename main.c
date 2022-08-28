@@ -46,15 +46,28 @@ int quick_sort(int numeros[],int primeiro,int ultimo){
 }
 
 void mediana(int v[]){
-    int T = 1000; //alterar o valor de 10 para 1000
-    int mediana;
-    mediana = v[T/2-1];   //por algum motivo no meu só dava certo tirando 1 da conta
-    printf("\nMediana: %i", mediana);
-    
+	int T = 1000; //alterar o valor de 10 para 1000
+	int mediana;
+	mediana = v[T/2-1];   //por algum motivo no meu só dava certo tirando 1 da conta
+	printf("\nMediana: %i", mediana);
+	
 }
   
 int main()
 {
-      printf("Hello World");
-    return 0;
+	// vetor que será ordenado
+	int vet[1000], escolha;
+	int tam_vet = sizeof(vet) / sizeof(int);
+	int i, r;
+
+  srand(time(NULL)); ///função para gerar números aleatórios em que a seed muda a cada vez que o programa é executado
+
+    for( i = 0; i < 1000; i++)
+    {
+        r = (rand() % 1000) + 1;
+        vet[i] = r;
+    }
+
+    printf("1000 Numeros Aleatorios devidamente ordenados de forma crescente:\n");
+    putchar('\n');
 }
