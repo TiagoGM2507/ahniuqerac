@@ -44,6 +44,14 @@ int quick_sort(int numeros[],int primeiro,int ultimo){
    }
   return numeros[1000];
 }
+
+void mediana(int v[]){
+    int T = 1000; //alterar o valor de 10 para 1000
+    int mediana;
+    mediana = v[T/2-1];   //por algum motivo no meu só dava certo tirando 1 da conta
+    printf("\nMediana: %i", mediana);
+    
+}
   
 int main()
 {
