@@ -70,4 +70,36 @@ int main()
 
     printf("1000 Numeros Aleatorios devidamente ordenados de forma crescente:\n");
     putchar('\n');
+
+    // inicializa random seed
+	srand(time(NULL));
+
+  do{ 
+  printf("digite o metodo de randomização: 0 = quick_sort | 1 = bubble_sort | ");
+  scanf("%d",&escolha);
+    
+	// chamada do quicksort
+  if(escolha==0)
+	  vet[1000] = quick_sort(vet, 0, 1000 - 1);
+  //chamada bubblesort
+  if(escolha==1)
+    vet[1000] = bubble_sort(vet);
+
+  if(escolha < 0 || escolha > 1)
+    printf("Voce digitou o numero errado");
+    
+  }
+  while(escolha < 0 || escolha > 1 ); 
+	// mostra o vetor ordenado
+	for(i = 0; i < tam_vet; i++)
+		printf("%d ", vet[i]);
+
+  mediana(vet);
+
+  media(vet);
+
+  maior_menor(vet);
+  
+
+	return 0;
 }
