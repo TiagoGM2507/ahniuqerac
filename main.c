@@ -52,9 +52,24 @@ void mediana(int v[]){
 	printf("\nMediana: %i", mediana);
 	
 }
+
+//função de media
+void media(int v[]){
+
+  int i, cont=0;
+  float media;
   
+  for (i=0; i<1000; i++)
+    cont = v[i]+cont;
+
+  media = cont/1000;
+  printf ("\nMedia: %.1f",media);
+  
+}
+
 int main()
 {
+
 	// vetor que será ordenado
 	int vet[1000], escolha;
 	int tam_vet = sizeof(vet) / sizeof(int);
@@ -71,7 +86,9 @@ int main()
     printf("1000 Numeros Aleatorios devidamente ordenados de forma crescente:\n");
     putchar('\n');
 
-    // inicializa random seed
+  
+
+	// inicializa random seed
 	srand(time(NULL));
 
   do{ 
@@ -102,4 +119,12 @@ int main()
   
 
 	return 0;
+}
+
+//função maior e menor
+void maior_menor(int v[]){
+
+  printf("\nO menor numero é o: %i",v[0]);
+  printf("\ne o maior é: %i",v[999]);
+  
 }
